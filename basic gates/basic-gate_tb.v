@@ -13,7 +13,7 @@ module basic_gate_tb();
 	wire g5;
 
 	// Instantiate the Unit Under Test (UUT)
-	or_and_not uut (.a(a),.b(b),.g1(g1),.g2(g2),.g3(g3),.g4(g4),.g5(g5));
+	basic_gates uut (.a(a),.b(b),.g1(g1),.g2(g2),.g3(g3),.g4(g4),.g5(g5));
 
 	initial begin
 		// Initialize Inputs
