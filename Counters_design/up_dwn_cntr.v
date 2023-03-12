@@ -11,12 +11,12 @@ module up_dwn_cntr(
     
     always @(posedge clk)
     begin
-        cc <= cc + 27'b0;
+        cc <= cc + 28'd1;
         if(cc == 200000000)
             clk_cnt =~ clk_cnt ;
         end
     
-    always@(posedge clk_cnt)
+    always@(posedge clk_cnt, posedge rst)
     begin
         if(rst | cnt == 3'b111)
             cnt <= 3'b000;
