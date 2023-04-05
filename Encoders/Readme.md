@@ -1,10 +1,10 @@
-## Encoders
+# Encoders
 
-# Priority encoder 4x2
-# Behavioral Style
+## Priority encoder 4x2
+#### Behavioral Style
     Code is added in this folder encoder_4x2.v
     
-# Data flow style
+### Data flow style
     module priority_encoder_datafloe(A0,A1,Y0,Y1,Y2,Y3);
     input Y0,Y1,Y2,Y3;
     output A0,A1;
@@ -14,7 +14,7 @@
 
     endmodule
     
-# Structural Style
+### Structural Style
     module or_gate(c,a,b);
     input a,b;
     output c;
