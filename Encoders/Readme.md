@@ -1,7 +1,7 @@
 # Encoders
 
 ## Priority encoder 4x2
-#### Behavioral Style
+### Behavioral Style
     Code is added in this folder encoder_4x2.v
     
 ### Data flow style
