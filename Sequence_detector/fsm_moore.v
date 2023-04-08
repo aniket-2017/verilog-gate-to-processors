@@ -1,10 +1,12 @@
 `timescale 1ns / 1ps
 //moore state machine sequence detector for 11010 sequence
-module fsm_2(clk,rst,inp,outp,state);
+module fsm_2(clk,rst,inp,outp,state,count);
    input clk, rst, inp; // inputs for fsm
    output outp;  // output
    output [2:0] state; // states of fsm
-	
+   output [2:0] count;
+   
+     reg [2:0] count =0;
 	 reg [2:0] state;
 	 reg outp;
 	 
@@ -94,4 +96,10 @@ module fsm_2(clk,rst,inp,outp,state);
                  outp <= 0; // else output is 0
              end
          end
+    
+    always@(posedge clk)
+    begin
+        if(outp)
+            count<= count+1;
+    end
 endmodule
